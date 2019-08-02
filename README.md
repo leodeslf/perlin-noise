@@ -1,15 +1,15 @@
-# Perlin.js
+# Perlin Noise
 
 ## About
 
 A tool to generate Perlin Noise (1, 2 and 3D).
 
-## Usage
+## Example
 
 ```JavaScript
-import PERLIN from '/modules/Perlin.js';
+import PERLIN from './perlin';
 
-// E.g
+// E.g.
 let x = 3;
 let y = 6;
 
@@ -24,6 +24,10 @@ let noise_2d = PERLIN.noise2D(x, y);
 - 2D `noise2D(x, y)`
 - 3D `noise3D(x, y, z)`
 
-## Credits
+## Author
 
-[Leonardo de S.L.F](https://github.com/Wikarot "GitHub profile")
+[Leonardo de S.L.F](https://github.com/Wikarot "GitHub profile").
+
+## License
+
+MIT License.

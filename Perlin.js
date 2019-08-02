@@ -8,13 +8,13 @@ const PERLIN = {
    * @returns {number}
    */
   noise1D(x) {
-      const MFX = Math.floor(x);
-      const X = MFX & 255;
-      x = x - MFX;
-      return (
-          lerp(fade(x),
-              grad1D(p[p[X]], x),
-              grad1D(p[p[X + 1]], x - 1)));
+    const MFX = Math.floor(x);
+    const X = MFX & 255;
+    x = x - MFX;
+    return (
+      lerp(fade(x),
+        grad1D(p[p[X]], x),
+        grad1D(p[p[X + 1]], x - 1)));
   },
 
   /**
@@ -24,26 +24,26 @@ const PERLIN = {
    * @returns {number}
    */
   noise2D(x, y) {
-      const MFX = Math.floor(x);
-      const MFY = Math.floor(y);
-      const X = MFX & 255;
-      const Y = MFY & 255;
-      x = x - MFX;
-      y = y - MFY;
-      const A = p[X] + Y;
-      const B = p[X + 1] + Y;
-      const FX = fade(x);
-      return (
-          lerp(
-              fade(y),
-              lerp(
-                  FX,
-                  grad2D(p[A], x, y),
-                  grad2D(p[B], x - 1, y)),
-              lerp(
-                  FX,
-                  grad2D(p[A + 1], x, y - 1),
-                  grad2D(p[B + 1], x - 1, y - 1))));
+    const MFX = Math.floor(x);
+    const MFY = Math.floor(y);
+    const X = MFX & 255;
+    const Y = MFY & 255;
+    x = x - MFX;
+    y = y - MFY;
+    const A = p[X] + Y;
+    const B = p[X + 1] + Y;
+    const FX = fade(x);
+    return (
+      lerp(
+        fade(y),
+        lerp(
+          FX,
+          grad2D(p[A], x, y),
+          grad2D(p[B], x - 1, y)),
+        lerp(
+          FX,
+          grad2D(p[A + 1], x, y - 1),
+          grad2D(p[B + 1], x - 1, y - 1))));
   },
 
   /**
@@ -54,46 +54,46 @@ const PERLIN = {
    * @returns {number}
    */
   noise3D(x, y, z) {
-      const MFX = Math.floor(x);
-      const MFY = Math.floor(y);
-      const MFZ = Math.floor(z);
-      const X = MFX & 255;
-      const Y = MFY & 255;
-      const Z = MFZ & 255;
-      x = x - MFX;
-      y = y - MFY;
-      z = z - MFZ;
-      const A = p[X] + Y;
-      const AA = p[A] + Z;
-      const AB = p[A + 1] + Z;
-      const B = p[X + 1] + Y;
-      const BA = p[B] + Z;
-      const BB = p[B + 1] + Z;
-      const FX = fade(x);
-      const FY = fade(y);
-      return (
+    const MFX = Math.floor(x);
+    const MFY = Math.floor(y);
+    const MFZ = Math.floor(z);
+    const X = MFX & 255;
+    const Y = MFY & 255;
+    const Z = MFZ & 255;
+    x = x - MFX;
+    y = y - MFY;
+    z = z - MFZ;
+    const A = p[X] + Y;
+    const AA = p[A] + Z;
+    const AB = p[A + 1] + Z;
+    const B = p[X + 1] + Y;
+    const BA = p[B] + Z;
+    const BB = p[B + 1] + Z;
+    const FX = fade(x);
+    const FY = fade(y);
+    return (
+      lerp(
+        fade(z),
+        lerp(
+          FY,
           lerp(
-              fade(z),
-              lerp(
-                  FY,
-                  lerp(
-                      FX,
-                      grad3D(p[AA], x, y, z),
-                      grad3D(p[BA], x - 1, y, z)),
-                  lerp(
-                      FX,
-                      grad3D(p[AB], x, y - 1, z),
-                      grad3D(p[BB], x - 1, y - 1, z))),
-              lerp(
-                  FY,
-                  lerp(
-                      FX,
-                      grad3D(p[AA + 1], x, y, z - 1),
-                      grad3D(p[BA + 1], x - 1, y, z - 1)),
-                  lerp(
-                      FX,
-                      grad3D(p[AB + 1], x, y - 1, z - 1),
-                      grad3D(p[BB + 1], x - 1, y - 1, z - 1)))));
+            FX,
+            grad3D(p[AA], x, y, z),
+            grad3D(p[BA], x - 1, y, z)),
+          lerp(
+            FX,
+            grad3D(p[AB], x, y - 1, z),
+            grad3D(p[BB], x - 1, y - 1, z))),
+        lerp(
+          FY,
+          lerp(
+            FX,
+            grad3D(p[AA + 1], x, y, z - 1),
+            grad3D(p[BA + 1], x - 1, y, z - 1)),
+          lerp(
+            FX,
+            grad3D(p[AB + 1], x, y - 1, z - 1),
+            grad3D(p[BB + 1], x - 1, y - 1, z - 1)))));
   }
 };
 
@@ -142,7 +142,7 @@ function grad2D(hash, x, y) {
 function grad3D(hash, x, y, z) {
   const h = hash & 15;
   const u = h < 8 ? x : y,
-      v = h < 4 ? y : h == 12 || h == 14 ? x : z;
+    v = h < 4 ? y : h == 12 || h == 14 ? x : z;
   return ((h & 1) == 0 ? u : -u) + ((h & 2) == 0 ? v : -v);
 }
 
