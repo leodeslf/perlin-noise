@@ -26,7 +26,7 @@ let noise_2d = PERLIN.noise2D(x, y);
 
 ## Author
 
-[Leonardo de S.L.F](https://github.com/Wikarot "GitHub profile").
+[Leonardo de S.L.F](https://github.com/leodeslf "GitHub profile").
 
 ## License
 
