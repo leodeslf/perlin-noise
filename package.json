@@ -1,0 +1,27 @@
+{
+  "name": "@leodeslf/perlin-noise",
+  "version": "1.1.0",
+  "description": "A Perlin Noise library for JavaScript.",
+  "main": "perlin.js",
+  "scripts": {
+    "build": "terser --comments false perlin.js > perlin.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leodeslf/perlin-noise.git"
+  },
+  "keywords": [
+    "perlin-noise"
+  ],
+  "author": "Leonardo de S.L.F",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leodeslf/perlin-noise/issues"
+  },
+  "homepage": "https://github.com/leodeslf/perlin-noise#readme",
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org",
+    "access": "public"
+  },
+  "type": "module"
+}

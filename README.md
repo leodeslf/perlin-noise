@@ -2,27 +2,30 @@
 
 ## About
 
-A tool to generate Perlin Noise (1, 2 and 3D).
+A Perlin Noise library for JavaScript.
+
+## Functions
+
+- `perlin1D`
+- `perlin2D`
+- `perlin3D`
+- `perlin4D`
+
+## Install
+
+```bash
+npm i @leodeslf/perlin-noise
+```
 
 ## Example
 
-```JavaScript
-import PERLIN from './perlin';
+```javascript
+import { perlin1D } from '@leodeslf/perlin-noise';
 
-// E.g.
-let x = 3;
-let y = 6;
-
-let noise_2d = PERLIN.noise2D(x, y);
+console.debug(perlin1D(0.125)); // -0.10894775390625
+console.debug(perlin1D(0.120)); // -0.1056811008
+console.debug(perlin1D(0.115)); // -0.10229407794375
 ```
-
-## Features
-
-`PERLIN` functions:
-
-- 1D `noise1D(x)`
-- 2D `noise2D(x, y)`
-- 3D `noise3D(x, y, z)`
 
 ## Author
 
