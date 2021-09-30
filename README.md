@@ -1,10 +1,25 @@
 # Perlin Noise
 
+```txt
+
+             _.~^~.__.~^~._
+           /~^~.______.~^~/\
+          /^~.________.~^/ /
+         /~^~.______.~^~/ /
+        /_.~^~.__.~^~._/ /
+       /_ /\___________\/
+      /._/ /
+     /~./ /
+    /^~/ /
+    \__\/
+
+```
+
 ## About
 
 A Perlin Noise library for JavaScript.
 
-## Functions
+## Features
 
 - `perlin1D`
 - `perlin2D`
@@ -17,7 +32,7 @@ A Perlin Noise library for JavaScript.
 npm i @leodeslf/perlin-noise
 ```
 
-## Example
+## Usage
 
 ```javascript
 import { perlin1D } from '@leodeslf/perlin-noise';

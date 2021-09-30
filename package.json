@@ -1,7 +1,7 @@
 {
   "name": "@leodeslf/perlin-noise",
   "version": "1.1.0",
-  "description": "A Perlin Noise library for JavaScript.",
+  "description": "A Perlin Noise library for JavaScript",
   "main": "perlin.js",
   "scripts": {
     "build": "terser --comments false perlin.js > perlin.min.js"
