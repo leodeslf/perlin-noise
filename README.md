@@ -42,6 +42,8 @@ console.debug(perlin1D(0.120)); // -0.1056811008
 console.debug(perlin1D(0.115)); // -0.10229407794375
 ```
 
+[Live demo here](https://leodeslf.github.io/perlin-noise/ "GitHub Pages") (1D, 2D, 3D, and 4D).
+
 ## Author
 
 [Leonardo de S.L.F](https://github.com/leodeslf "GitHub profile").
