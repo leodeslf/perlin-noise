@@ -19,8 +19,8 @@
 
     let raf = 0;
     const I = (u, v) => (v * SIDE + u) * 4;
-    const SIDE = 400;
-    const RES = 50;
+    const SIDE = 300;
+    const RES = 40;
     const ROW = SIDE / 4;
     const SHIFT = .5;
     const CONTRAST = .5;
@@ -38,7 +38,7 @@
           for (let channel = 0; channel < 3; channel++) {
             IMAGE_DATA.data[index + channel] = RGB;
           }
-          IMAGE_DATA.data[index + 3] = 255;
+          IMAGE_DATA.data[index + 3] = RANGE;
         }
       }
       for (let v = ROW; v < ROW * 2; v++) {
@@ -50,7 +50,7 @@
           for (let channel = 0; channel < 3; channel++) {
             IMAGE_DATA.data[index + channel] = RGB;
           }
-          IMAGE_DATA.data[index + 3] = 255;
+          IMAGE_DATA.data[index + 3] = RANGE;
         }
       }
       for (let v = ROW * 2; v < ROW * 3; v++) {
@@ -62,7 +62,7 @@
           for (let channel = 0; channel < 3; channel++) {
             IMAGE_DATA.data[index + channel] = RGB;
           }
-          IMAGE_DATA.data[index + 3] = 255;
+          IMAGE_DATA.data[index + 3] = RANGE;
         }
       }
       for (let v = ROW * 3; v < ROW * 4; v++) {
@@ -74,7 +74,7 @@
           for (let channel = 0; channel < 3; channel++) {
             IMAGE_DATA.data[index + channel] = RGB;
           }
-          IMAGE_DATA.data[index + 3] = 255;
+          IMAGE_DATA.data[index + 3] = RANGE;
         }
       }
       ctx.clearRect(0, 0, SIDE, SIDE);
@@ -97,7 +97,7 @@
 </head>
 
 <body>
-  <canvas width="400" height="400" id="canvas"></canvas>
+  <canvas width="300" height="300" id="canvas"></canvas>
   <p>Demo 1D, 2D, 3D, and 4D (top to bottom).</p>
 </body>
 
